@@ -25,8 +25,7 @@
       TabMenu += '</li>';
     });
     TabMenu += '</ul>';
-    
-    
+
     var linkSosmed = '<div id="links-sosmed">';
     $.each(LinksSosmed, function( index, value ) {
       linkSosmed += '<div class="link"><a href="'+value['links']+'">'+value['name']+'</a></div>';
@@ -122,5 +121,3 @@
     LicensiLogo += '</center>';
     
     $('div#content').append('<div id="footer">'+bankstatus+''+LicensiLogo+'</div>');
-    
-    //$('div#footer').append(bankstatus);
