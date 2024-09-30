@@ -1,0 +1,137 @@
+.Notif-container {
+	transition: all 500ms ease;
+	transition-property: top, right, bottom, left, opacity;
+	font-family: Roboto, sans-serif;
+	font-size: 14px;
+	min-height: 14px;
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	line-height: 22px;
+	padding: 20px 24px 20px 80px;
+	bottom: -100px;
+	top: -100px;
+	opacity: 0;
+	z-index: 9999;
+	box-shadow: rgba(17, 17, 26, .1) 0 4px 16px, rgba(17, 17, 26, .05) 0 8px 32px;
+	border-radius: 10px;
+	overflow: hidden
+}
+
+.Notif:before {
+	display: block;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	background-image: url(https://i.ibb.co/2tNpLhd/icon.png);
+	background-size: cover;
+	border-radius: 10px;
+	background-repeat: no-repeat;
+	background-position: left;
+	margin: 15px 0 15px -65px;
+	content: " "
+}
+
+.Notif p {
+	display: block;
+	padding: 20px 0 15px 230px;
+	height: 35px;
+	line-height: 30px !important;
+	font-size: 18px;
+	font-weight: 300;
+	float: left
+}
+
+.Notif p:before {
+	content: "SUKSES WD M77CASINO!";
+	font-size: 13px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-indent: 20px;
+	background-image: url(https://i.ibb.co/3vdpqXr/success-icon.webp);
+	background-repeat: no-repeat;
+	background-position: left 3px top 100%;
+	margin-top: -10px;
+	height: 20px;
+	line-height: 10px;
+	width: 100%;
+	float: left;
+	padding: 10px 0 0 5px
+}
+
+.Notif-container .action {
+	background: inherit;
+	display: inline-block;
+	font-size: inherit;
+	text-transform: uppercase;
+	color: #1E90FF;
+	margin: 0 0 0 24px;
+	padding: 0;
+	min-width: min-content;
+	cursor: pointer
+}
+
+@media(min-width:640px) {
+	.Notif-container {
+		min-width: 288px;
+		max-width: 450px;
+		display: inline-flex;
+		margin: 24px
+	}
+}
+
+@media(max-width:640px) {
+	.Notif-container {
+		left: 0;
+		right: 0;
+		width: 100%
+	}
+}
+
+.Notif-pos.bottom-center {
+	top: auto !important;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 0)
+}
+
+.Notif-pos.bottom-left {
+	top: auto !important;
+	bottom: 0;
+	left: 0
+}
+
+.Notif-pos.bottom-right {
+	top: auto !important;
+	bottom: 0;
+	right: 0
+}
+
+.Notif-pos.top-left {
+	bottom: auto !important;
+	top: 0;
+	left: 0
+}
+
+.Notif-pos.top-center {
+	bottom: auto !important;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 0)
+}
+
+.Notif-pos.top-right {
+	bottom: auto !important;
+	top: 0;
+	right: 0
+}
+
+@media(max-width:640px) {
+
+	.Notif-pos.bottom-center,
+	.Notif-pos.top-center {
+		left: 0;
+		transform: none
+	}
+}
